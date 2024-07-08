@@ -249,9 +249,7 @@ defmodule Gmail.LabelTest do
     label_name: label_name,
     expected_result: expected_result,
     bypass: bypass,
-    label_name: label_name,
     label_id: label_id,
-    expected_result: expected_result,
     user_id: user_id
   } do
     new_label_name = "Something Else"
