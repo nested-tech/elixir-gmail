@@ -1,4 +1,5 @@
-use Mix.Config
+import Config
+
 
 config :gmail, :thread,
   pool_size: 100
