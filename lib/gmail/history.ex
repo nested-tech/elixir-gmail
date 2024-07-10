@@ -28,6 +28,8 @@ defmodule Gmail.History do
         :not_found
       {:ok, %{"error" => %{"code" => 400, "errors" => errors}}} ->
         {:error, errors}
+      {:ok, %{"history" => history, "nextPageToken" => next_page_token}} ->
+        {:ok, Utils.atomise_keys(history), next_page_token}
       {:ok, %{"history" => history}} ->
         {:ok, Utils.atomise_keys(history)}
     end
