@@ -32,6 +32,8 @@ defmodule Gmail.History do
         {:ok, Utils.atomise_keys(history), next_page_token}
       {:ok, %{"history" => history}} ->
         {:ok, Utils.atomise_keys(history)}
+      {:ok, %{"historyId" => _historyId}} ->
+        {:ok, []}
     end
   end
 
